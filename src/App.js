@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { useState } from "react";
+import "./index.css";
+const btn = [
+  "C",
+  "%",
+  "/",
+  "X",
+  "-",
+  "+",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+];
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Calculator />
     </div>
   );
 }
 
-export default App;
+function Calculator() {
+  return (
+    <div className="calculator">
+      <div className="display">
+        <p className="input-value">Input Value</p>
+        <p className="reuslt">9</p>
+      </div>
+      <div className="Buttons">
+        {btn.map((bt) => (
+          <button>{bt}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
