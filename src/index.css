@@ -27,12 +27,14 @@ body {
 }
 
 .app {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 10px;
 }
 
 .calculator {
@@ -40,17 +42,13 @@ body {
   width: fit-content;
   height: fit-content;
   background-image: linear-gradient(to top left, #bc61f5, #d7a1f9);
-  /* background-color: #bc61f5; */
   border-radius: 10px;
 }
 
 .display {
-  /* border: 1px solid green; */
   margin-bottom: 8px; /* Add margin to separate the display from buttons */
   padding: 8px;
   height: 40%;
-  /* background-color: aqua; */
-  /* back */
 }
 
 .Buttons {
@@ -60,13 +58,39 @@ body {
     1fr
   ); /* Adjust the number of columns as needed */
   grid-gap: 8px; /* Add some gap between buttons */
+  justify-items: center !important;
 }
 
 button {
   width: 80px;
   height: 80px;
-  /* padding: 38px; */
   font-size: 20px;
   border-radius: 50%;
   border: none;
+}
+
+.input-value {
+  border: 1px solid;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 25px;
+  border: none;
+  background-color: inherit;
+  overflow: hidden;
+}
+.result {
+  /* border: 1px solid; */
+  height: 50px;
+  text-align: end;
+  font-size: 25px;
+}
+
+@media (max-width: 786px);
+ {
+  .calculator {
+    width: 100%;
+  }
 }
