@@ -4,7 +4,7 @@ const btn = [
   "C",
   "=",
   "/",
-  "X",
+  "*",
   "-",
   "+",
   "1",
@@ -16,6 +16,7 @@ const btn = [
   "7",
   "8",
   "9",
+  "0",
 ];
 export default function App() {
   return (
@@ -26,13 +27,16 @@ export default function App() {
 }
 
 function Calculator() {
-  const [calinput, setInput] = useState("0");
+  const [calinput, setInput] = useState("");
   const [result, setResult] = useState("");
 
   function handleClick(value) {
     if (value === "=") {
       // const evaluateExpression = eval(ClipboardEvent).to;
       setResult(eval(calinput).toString());
+    } else if (value === "C") {
+      setInput("");
+      setResult("");
     } else {
       setInput((prevInput) => prevInput + value);
     }

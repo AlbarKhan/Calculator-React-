@@ -41,7 +41,8 @@ body {
     1fr
   ); /* Adjust the number of columns as needed */
   grid-gap: 8px; /* Add some gap between buttons */
-  /* justify-items: center !important; */
+  /* border: 1px solid; */
+  justify-items: center;
 }
 
 button {
